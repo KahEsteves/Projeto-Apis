@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(221, 219, 219, 0.788);
+}
+h3 {
+    background-color:#1c0f2e;
+    color: #fff;
+    text-align: center;
+}
+
+.caixa-form {
+    height: auto;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: auto;
+    text-align: center;
+    color: #fff;
+    width: 50%;
+    padding: 4%;
+    background-color: rgba(50, 49, 51, 0.904) !important;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#caixa-forms {
+    margin: 0 auto;
+}
+
+.cadastro-titulo {
+    text-shadow:
+        3px 3px 6px rgb(92, 19, 189),
+        -6px -6px 3px #333,
+        -9px 9px 7px #555,
+        12px -12px 7px #444
+}
+
+.btn {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #270f2e;
+    padding: 2%;
+    border-radius: 5%;
+    border: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #1c0f2e;
+    color: rgb(92, 19, 189);
+}
+
+#link-guia {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin-bottom: 0%;
+}
+
+.conteudo-footer-cep {
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+@media print {
+    .caixa-form {
+        display: none;
+    }
+}
+
+.imprime {
+    text-align: left;
+    background-color: rgba(51, 49, 49, 0.904);
+    color: rgb(255, 255, 255);
+    text-shadow:
+        3px 3px 6px rgb(92, 19, 189),
+        -6px -6px 3px #333,
+        -9px 9px 7px #555,
+        12px -12px 7px #444;
+    width: 30%;
+    margin-left: 35%;
+    padding: 2%;
+    border-style: groove;
+    border-radius: 10%;
+}

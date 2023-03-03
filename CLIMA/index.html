@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>API - TEMPO</title>
+</head>
+<body>
+        <!--Navbar-->
+        <div class="header">
+            <a href="#default" class="logo">Consumindo API</a>
+            <div class="header-right">
+              <a class="active" href="#home">Home</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+            </div>
+          </div>
+        <!--Showcase-->
+    
+        <div id="showcase">
+
+            <br>
+                <main>
+                    <div class="box">
+                            
+                        <div class="textoatencao">
+                            <h2>API CLIMA TEMPO</h2>
+                            <br>
+                        </div>
+                        
+                        <h1> Veja quantos graus está fazendo no seu estado e/ou cidade</h1>
+                        <br><br>
+                            <p id="temperatura">Carregando...</p>
+                            <br>
+
+                            <input type="text" id="local" class="busca2" placeholder=" Digite sua cidade ">
+                            <button class="button2" onclick="getWeather()">buscar</button>
+
+
+                    </div>
+
+                </main> 
+        </div>
+            
+        <!-- Footer-->
+    
+        <footer id="footer">
+            <div class="footer-content">
+                <img src="imagens/logo.png" alt="" class="logo">
+    
+                <ul class="footer-menu">
+                    <p>SENAI</p>
+                    <li class="footer-menu-item">
+                        NAMI JAFET
+                    </li>
+    
+                </ul>
+    
+                <ul class="footer-menu">
+                    <p>ALUNA</p>
+                    <li class="footer-menu-item">
+                        KARINE ESTEVES
+                    </li>
+                </ul>
+    
+                <ul class="footer-menu">
+                    <p>PROFESSOR</p>
+                    <li class="footer-menu-item">
+                        PROF BRUNO
+                    </li>
+                </ul>
+    
+                <div class="socials">
+    
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+    
+                </div>
+    
+            </div>
+    
+        </footer>
+</body>
+<script>
+    //Biblioteca axios para realizar uma requisição HTTP a API da OpenWeatherMap para obter a previsão do tempo.
+
+    //esta linha define a fução assincrona, isso significa que a funçaõ pode esperar por uma resposta da api.
+
+    async function getWeather(){
+
+        //Nesta linha estamos fazendo a chamada da API usando a biblioteca Axios.A URL inclui informações de localização(Mogi das Cruzes) e a unidade de medida (Celsius) e a chave da API (API-KEY).
+
+        var cidade = document.getElementById("local").value;
+
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=64ed82577ced7f69cb1687f0ce536131`);
+
+        //Aqui estamos extraindo a temperatura atual (celsius) da resposta da API e armazenando na variavel = tempCelsius
+
+        const tempCelsius = response.data.main.temp
+
+        document.querySelector('#temperatura').innerHTML = `A temperatura atual é de ${tempCelsius}° em ${cidade}`;
+    }
+
+    //chamando a função getWather para iniciar a consulta a API.
+    getWeather();
+
+</script>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/41c67a60df.js" crossorigin="anonymous"></script>
+</html>

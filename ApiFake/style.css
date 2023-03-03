@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+    nav {
+    display: flex; /* 1 */
+    justify-content: space-between; /* 2 */
+    padding: 1rem 2rem; /* 3 */
+    background-color:  #aaa8a8e5; /* 4 */
+  }
+img {
+    width: 110px;
+    padding-left: 20px;
+}
+h2 {
+    margin: 40px 15px;
+    font-size: Bradley Hand, cursive;
+    color: #171a1d;
+    position: unset;
+    padding-right: 1100px;
+}
+  nav ul {
+    display: flex; /* 5 */
+    list-style: none; /* 6 */
+  }
+  
+  nav li {
+    padding-left: 1rem; /* 7! */
+    padding-top: 45px;
+  }
+  nav a {
+    text-decoration:double;
+    color: #232d36;
+  }
+#showcase,
+#showcase1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url(imagens/fundo2.png);
+    background-color: rgba(0, 0, 0, 0.10);
+    background-blend-mode: color;
+}
+#showcase .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#showcase .showcase-container h2 {
+    font-size: 5rem;
+}
+#showcase .showcase-container p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+h1 {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+h1 {
+    color: rgb(26, 22, 22);
+    margin: 15px 30px;
+    background-color: #bbbbbb ;
+    background-size: contain;
+}
+h1:hover {
+    color: #f9f9f9;
+    background-color: #1c1f22;
+}
+.button{
+    background-color: #949292c2;
+    color: rgb(255, 247, 247);
+	border-style: outset;
+	border-color: #f9f9f9;
+	height: 40px;
+	width: 120px;
+	font: bold15px arial,sans-serif;
+	text-shadow: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.button:hover {
+    background-color: #ffffffc2;
+    color: #171a1d;
+}
+.caixa {
+    margin-top: 20px;
+}
+fieldset{
+    color: rgb(206, 206, 206);
+    background-color: #223a5096;
+}
+footer{
+    display: flex; /* 1 */
+    justify-content: space-between; /* 2 */
+    background-color:  #aaa8a8e5; /* 3 */
+}
+footer ul {
+  display: flex; /* 5 */
+  list-style: none; /* 6 */
+}
+footer li {
+  padding-left: 1rem; /* 7! */
+  padding-top: 45px;
+}
+footer a {
+  text-decoration:double;
+  color: #232d36;
+}
